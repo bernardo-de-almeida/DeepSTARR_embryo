@@ -7,34 +7,8 @@
 ##
 ###############################################
 
-#TODO - add message and email parameter in case job dies/exit unexpectedly, i.e. not enough memory problem
-
-#update 21/06/2018
-#now we have two environment - one using gridengine submission system and another - slurm
-#and they are running diffferent OS - Debian vs CentOS.
-#this how I will get where I am...
-
-#update 2019/06/17 in the new cluster (clip) this command does not work any more.
-#OS_id=`lsb_release -idrc|grep Description|perl -ne 'chomp($_); ($name)=$_=~/\:\s+(\S+)\s+/; print $name."\n";'`
-
-#update 2019/06/17
-# Instead Seren Uemit has recommended to use  $LMOD_SYSHOST system variable
-# So, for the moment I have 'CLIP' , 'IMPIMBA-2', or '' (empty for old cluster, including nodes stark-1 stark-2) values
-OS_id=$(echo $LMOD_SYSHOST)
-
-#update 2021/01/26 - Bernardo Almeida
-# Added partition and gres
-
-#Debian and old cluster specific defaults
-#if [ "$OS_id" == "Debian" ]; then ## commad was for lsb_release
 if [ "$OS_id" == "" ]; then 
-  # update 6.07.18 It is not safe to load this module multiple times (when script is running from loops for example.),
-  # so its better to load this module separately, only once, before run any command
-  # module load gridengine/2011.11
    QUEUE=public.q
-# centOS and new cluster specific defaults
-#else
-
 fi
 
 ## defaults
