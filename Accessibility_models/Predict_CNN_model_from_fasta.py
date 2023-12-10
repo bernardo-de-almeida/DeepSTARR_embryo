@@ -9,11 +9,11 @@ def main(argv):
    try:
       opts, args = getopt.getopt(argv,"hs:m:o:",["seq=","model=","outdir="])
    except getopt.GetoptError:
-      print('Predict_enh_activity_CNN_model_from_fasta.py -s <fasta seq file> -m <CNN model file> -o <output directory>')
+      print('Predict_CNN_model_from_fasta.py -s <fasta seq file> -m <CNN model file> -o <output directory>')
       sys.exit(2)
    for opt, arg in opts:
       if opt == '-h':
-         print('Predict_enh_activity_CNN_model_from_fasta.py -s <fasta seq file> -m <CNN model file> -o <output directory>')
+         print('Predict_CNN_model_from_fasta.py -s <fasta seq file> -m <CNN model file> -o <output directory>')
          sys.exit()
       elif opt in ("-s", "--seq"):
          new_seq = arg

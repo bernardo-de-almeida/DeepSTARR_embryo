@@ -155,12 +155,4 @@ if [ "$Modisco" == "1" ]; then
     
   done
 
-
-
 fi
-
-
-
-
-
-

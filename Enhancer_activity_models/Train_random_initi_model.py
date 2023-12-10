@@ -10,11 +10,11 @@ def main(argv):
    try:
       opts, args = getopt.getopt(argv,"hi:v:a:o:")
    except getopt.GetoptError:
-      print('Run_deepSTARR_model.py -i <fold> -v <output variable> -o <output model ID>')
+      print('Train_random_initi_model.py -i <fold> -v <output variable> -o <output model ID>')
       sys.exit(2)
    for opt, arg in opts:
       if opt == '-h':
-         print('Run_deepSTARR_model.py -i <fold> -v <output variable> -o <output model ID>')
+         print('Train_random_initi_model.py -i <fold> -v <output variable> -o <output model ID>')
          sys.exit()
       elif opt in ("-i"):
          fold = arg

@@ -14,11 +14,11 @@ def main(argv):
    try:
       opts, args = getopt.getopt(argv,"hm:s:c:b:",["model=", "sequence_set=", "bg="])
    except getopt.GetoptError:
-      print('run_DeepLIFT.py -m <CNN model file> -s <sequence set> -b <random/dinuc_shuffle>')
+      print('run_DeepSHAP_DeepExplainer.py -m <CNN model file> -s <sequence set> -b <random/dinuc_shuffle>')
       sys.exit(2)
    for opt, arg in opts:
       if opt == '-h':
-         print('run_DeepLIFT.py -m <CNN model file> -s <sequence set> -b <random/dinuc_shuffle>')
+         print('run_DeepSHAP_DeepExplainer.py -m <CNN model file> -s <sequence set> -b <random/dinuc_shuffle>')
          sys.exit()
       elif opt in ("-m", "--model"):
          model_ID = arg
